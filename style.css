@@ -1,0 +1,200 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #333;
+  padding: 1rem 2rem;
+}
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover .navbar-logo {
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Centering Navbar Items */
+.navbar-collapse {
+  justify-content: center;
+  display: flex;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  width: 100%;
+  max-width: 350px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio:3/2;
+  object-fit:contain;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-body {
+  padding:20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom:10px;
+  line-height: 1.5;
+}
+
+.card-text small {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+/* Card Footer Styling */
+.card-footer {
+  display: flex;
+  justify-content: space-between; /* Space between the two buttons */
+  align-items: center;
+  padding: 10px;
+}
+
+/* Button Styling */
+.card-footer .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 48%; /* Adjust button width to allow space between them */
+}
+
+.card-footer .btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Carousel Styling */
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Checkout Container */
+.checkout-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-around;
+}
+
+.product {
+  width: 250px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#icon {
+  font-size: 30px;
+  color: #007bff;
+}
+
+/* Typography and List Styling */
+nav {
+  font-size: 1.3rem;
+}
+
+li {
+  margin: 10px;
+  padding: 0 25px;
+  font-weight: 500;
+}
+
+li a {
+  text-decoration: none;
+  color: #333;
+}
+
+li a:hover {
+  color: #007bff;
+}
+
+#btn {
+  display: block;            /* Make the button a block element to enable centering */
+  margin: 50px auto;         /* Center horizontally and add 50px margin from top and bottom */
+  padding: 15px 30px;        /* Add padding to the button */
+  font-size: 1.2rem;         /* Increase font size for better visibility */
+  text-align: center;        /* Align text to the center */
+}
