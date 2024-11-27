@@ -167,7 +167,7 @@
 }
 
 #icon {
-  font-size: 30px;
+  font-size:20px;
   color: #007bff;
 }
 
@@ -198,3 +198,4 @@ li a:hover {
   font-size: 1.2rem;         /* Increase font size for better visibility */
   text-align: center;        /* Align text to the center */
 }
+

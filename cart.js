@@ -10,6 +10,7 @@ if (cartItems && cartItems.length > 0) {
       .then(res => res.json())
       .then((item) => {
         container.innerHTML += `
+        
           <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-duration="3000">
             <img src="${item.images[0]}" class="card-img-top" alt="${item.title}">
             <div class="card-body">
@@ -18,6 +19,8 @@ if (cartItems && cartItems.length > 0) {
               <p class="card-text"><strong>Price:</strong> $${item.price}</p>
             </div>
           </div>
+  
+          
         `;
 
       })
