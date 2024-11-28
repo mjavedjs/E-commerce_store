@@ -3,13 +3,14 @@ let icon = document.querySelector("#icon");
 let btn=document.querySelector("#btn")
 let iconCount = 0
  globalArray = []
+ 
 fetch('https://dummyjson.com/products')
 .then(res => res.json())
 .then((res)=>{
      res.products.map((item,index)=>{
      let imgurl= item.images [0]
      container.innerHTML += `
-    <div class="card" style="width: 18rem; "   data-aos="fade-up" data-aos-duration="3000">
+    <div class="card" style="width: 18rem; ">
       <img src="${imgurl}" class="card-img-top" alt="${item.title}">
       <div class="card-body">
         <h5 class="card-title">${item.title}</h5>
