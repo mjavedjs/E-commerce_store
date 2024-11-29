@@ -1,4 +1,4 @@
-/* Global Styles */
+Global Styles
 * {
   margin: 0;
   padding: 0;
@@ -19,12 +19,7 @@ body {
   padding: 1.2rem 2.5rem;
 }
 
-.navbar-logo {
-  height: 50px;
-  width: auto;
-  transition: transform 0.3s ease-in-out;
-  font-weight:600;
-}
+
 
 .navbar-brand:hover .navbar-logo {
   transform: scale(1.1);
@@ -244,32 +239,45 @@ li a:hover {
 }
 
 /* Footer Styling */
-footer {
-  background-color: #1e2a3a;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.2rem;
-  border-top: 1px solid #333;
-}
+  footer {
+    background-color: #1e2a3a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-top: 1px solid #333;
+  }
 
-footer .footer-text {
-  margin-bottom: 10px;
-}
+  footer .footer-text {
+    margin-bottom: 10px;
+  }
 
-footer .footer-links {
+  footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  footer .footer-links a {
+    text-decoration: none;
+    color: #00bcd4;
+    font-weight: 600;
+  }
+
+  footer .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  #icon{
+    font-size:18px;
+  }
+  .button-group {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  gap: 10px; /* Add space between buttons */
 }
 
-footer .footer-links a {
-  text-decoration: none;
-  color: #00bcd4;
-  font-weight: 600;
-}
-
-footer .footer-links a:hover {
-  color: #fff;
-  text-decoration: underline;
+.button-group .btn {
+  flex: 1; /* Ensure buttons are evenly spaced if needed */
+  text-align: center;
 }

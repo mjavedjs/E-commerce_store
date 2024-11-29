@@ -1,7 +1,3 @@
-// let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []
-
- 
-// let globalArray=[];
 
 let container = document.querySelector('.container');
 
@@ -14,9 +10,9 @@ console.log(cartItems);
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        res.quantity = 1; // Initialize quantity for the item
-        globalArray.push(res); // Add the item to the global array
-        renderCartItem(); // Re-render the cart
+        res.quantity = 1; 
+        globalArray.push(res); 
+        renderCartItem(); 
       })
       .catch((err) => {
         console.error(`Error fetching product with ID ${itemId}:`, err);
@@ -34,8 +30,10 @@ console.log(cartItems);
              <h5 class="card-title">${item.title}</h5>              
               <p class="card-text">${item.description}</p>
              <p class="card-text"><strong>Price:</strong> $${(item.price * item.quantity).toFixed(2)}</p>
+             <div class="button-group">
              <a href="#" class="btn btn-primary" onclick="inc(${index})">+</a>
-            <a href="#" class="btn btn-primary" onclick="dec(${index})">-</a>
+             <a href="#" class="btn btn-primary" onclick="dec(${index})">-</a>
+           </div>
             </div>
            </div>
         `
@@ -56,8 +54,8 @@ console.log(cartItems);
     }
  }
  function updateLocalStorage() {
-    const updatedCartItems = globalArray.map((item) => item.id); // Store only product IDs
-    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems)); // Save IDs to localStorage
+    const updatedCartItems = globalArray.map((item) => item.id); 
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems)); 
   }
  container.innerHTML = "<p>No items in your cart.</p>";
 

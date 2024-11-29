@@ -34,28 +34,34 @@ function seeMore(id){
 }
 
 function addcart(id) {
+  if (globalArray.includes(id)) {
+    Swal.fire({
+      text: "Already in the cart!",
+      icon: "success"
+    }); 
+    return; 
+  }
+
   iconCount++; 
   globalArray.push(id);
   console.log("Items in Cart:", globalArray);
   icon.innerHTML = `
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="#" id="icon">
       <i class="fa-solid fa-truck"></i> <span>${iconCount}</span>
     </a>
   `;
+
   console.log(`Item added to cart: ${id}`);
+
   Swal.fire({
     title: "Good job!",
     text: "Item added to the cart!",
     icon: "success"
   }); 
+ 
+
+
 }
-
-
-// function checkout(id) {
-//   localStorage.setItem('userid', JSON.stringify(id));
-//   window.location = 'add.html';
-// }
-
 
 function checkout() {
   localStorage.setItem('cartItems', JSON.stringify(globalArray)); 
